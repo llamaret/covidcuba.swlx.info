@@ -32,7 +32,7 @@ def get_json_info():
 def main():
 
     data = get_json_info()
-    path = 'data/paises-info-dias.json'
+    path = 'assets/data/paises-info-dias.json'
     json.dump(data, open(path, 'w'))
 
     print(json.dumps(data, indent=2))
