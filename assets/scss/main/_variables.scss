@@ -1,0 +1,37 @@
+
+//== Template Main Color
+$base-color: #500ade;
+$base-color-2: #852aff;
+$secondary-color: #333333;
+$bg-color:#f7f7f7;
+$white: #fff;
+//== heading color
+$heading-color: #1c144e;
+$descr-color: #666666;
+
+$left:rgb(94,44,237);
+$right:rgb(151,73,248);
+
+  
+/*-----------------
+    @Typography
+-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+$body-font:'Poppins', sans-serif;
+$heading-font:'Poppins', sans-serif;
+//== font sizes
+$base-font-size: 16px !default;
+$font-size-h1: 72px !default;
+$font-size-h2: 52px !default;
+$font-size-h3: 32px !default;
+$font-size-h4: 22px !default;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height: 1.6 !default; // 24/15
+// border-radius
+$border-radius-5: 5px !default;
+$border-radius-25: 25px !default;
+$border-radius-3: 3px !default;
+$border-radius-circle: 50% !default;
+//  transition
+$transition: all .3s ease-in;
+$transition-long: all .5s ease-in;

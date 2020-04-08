@@ -1,0 +1,90 @@
+/*------------------------
+    Why Choose Us
+-------------------------*/
+.why-choose-area {
+    padding: 112px 0 120px 0;
+    position: relative;
+    .shape-1{
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        animation: fadeIn 10s linear 2s infinite;
+    }
+    &.why-choose-us-bg{
+        background-image: url(../img/bg/why-us-bg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    &.dark-bg{
+        background-image: url(../img/bg/why-us-dark-bg.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+.single-why-us-item{
+    border: 1px solid rgba($white,.8);
+    border-radius: 6px;
+    padding: 40px 30px 15px 30px;
+    margin-bottom: 30px;
+    background-color: rgba(#7646e9,.2);
+    @include transition($transition);
+    &.white{
+        background-color: transparent;
+    }
+    &:hover{
+        background-color: $white;
+        .content{
+            .title{
+                color: $heading-color;
+            }
+            p{
+                color: $descr-color;
+            }
+        }
+    }
+    .icon{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-image: -moz-linear-gradient( 50deg, rgb(119,109,242) 0%, rgb(161,240,230) 100%);
+        background-image: -webkit-linear-gradient( 50deg, rgb(119,109,242) 0%, rgb(161,240,230) 100%);
+        background-image: -ms-linear-gradient( 50deg, rgb(119,109,242) 0%, rgb(161,240,230) 100%);
+        box-shadow: 0px 26px 68px 0px rgba(42, 0, 117, 0.4);
+        text-align: center;
+        line-height: 60px;
+        font-size: 30px;
+        color: $white;
+        margin-bottom: 27px;
+        &.gdbg-1{
+            background-image: -moz-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+            background-image: -webkit-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+            background-image: -ms-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+            box-shadow: 0px 26px 68px 0px rgba(42, 0, 117, 0.4);
+        }
+        &.gdbg-2{}
+        &.gdbg-3{
+            background-image: -moz-linear-gradient( 50deg, rgb(232,119,203) 0%, rgb(161,151,250) 100%);
+            background-image: -webkit-linear-gradient( 50deg, rgb(232,119,203) 0%, rgb(161,151,250) 100%);
+            background-image: -ms-linear-gradient( 50deg, rgb(232,119,203) 0%, rgb(161,151,250) 100%);
+        }
+        &.gdbg-4{
+            background-image: -moz-linear-gradient( 50deg, rgb(112,191,236) 0%, rgb(39,132,252) 100%);
+            background-image: -webkit-linear-gradient( 50deg, rgb(112,191,236) 0%, rgb(39,132,252) 100%);
+            background-image: -ms-linear-gradient( 50deg, rgb(112,191,236) 0%, rgb(39,132,252) 100%);
+        }
+    }
+    .content{
+        .title{
+            font-size: 22px;
+            line-height: 32px;
+            color:$white;
+            @include transition($transition);
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            color: rgba($white,.8);
+            @include transition($transition);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/*-------------------------------
+    Full Width Features Area
+-------------------------------*/
+.full-width-feature-style-03{
+    .content-area{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        .section-title{
+            .title{
+                letter-spacing: -1px;
+            }
+        }
+    }
+}

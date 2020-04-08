@@ -1,0 +1,44 @@
+/*---------------------------
+    Screenshort area
+---------------------------*/
+.screenshort-area{
+    padding-bottom: 102px;
+    position: relative;
+    .shape-1{
+        position: absolute;
+        left: 10%;
+        bottom: 10%;
+        animation: upndown 10s linear 2s infinite;
+    }
+    .shape-2{
+        position: absolute;
+        left: 6%;
+        bottom: 20%;
+        animation: upndown 8s linear 2s infinite;
+        opacity: .5;
+    }
+}
+.single-screenshort-item{
+    box-shadow: 0 0 5px rgba(#000,.2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.screeshort-carousel-wrap-02{
+    position: relative;
+    z-index: 0;
+    .mobile-cover{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        overflow: hidden;
+    }
+    .single-screenshort-item{
+        box-shadow: none;
+        border-bottom: 0px;
+        border-radius: 10px;
+        img{
+            border-radius: 10px;
+        }
+    }
+}

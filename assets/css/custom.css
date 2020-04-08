@@ -1,0 +1,439 @@
+body {
+    font-size: 1rem;
+}
+
+body > div {
+    max-width: 100%;
+    margin: 0 !important;
+}
+
+.navbar {
+    padding: 0 1rem 0 0;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.bg-light {
+    background: #D1D2D4 !important;
+}
+
+.bg-success {
+    background: #00aeef !important;
+}
+
+.bg-primary {
+    background: #005778 !important;
+}
+
+.bg-info {
+    background: #939393 !important;
+}
+
+.bg-warning {
+    background: #b11116 !important;
+}
+
+.bg-danger {
+    background: #d0797c !important;
+}
+
+.bg-dark {
+    background: #166763 !important;
+}
+
+.common-bg {
+    background-color: #007469;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    border: none;
+}
+
+#apks-info {
+    border-radius: 0;
+}
+
+#apks-info > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #166763;
+}
+
+#apks-info > a:hover {
+    color: darkgray;
+}
+
+.app-logo {
+    height: 20px;
+    margin-top: -10px;
+}
+
+#map-mun, #map-pro {
+    background-color: #ffffff;
+    min-height: 371px;
+}
+
+#project {
+    text-align: center;
+}
+
+.rounded {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.border {
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #166763;
+}
+
+#gen-info {
+    color: #ffffff;
+    background-color: #166763;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+.gen-info-item {
+    margin-bottom: 1px;
+    font-size: 0.9rem;
+}
+
+#logo-container {
+    background-color: #D1D2D4;
+    margin-left: 5px;
+}
+
+#first-block {
+    min-height: 100px;
+    margin-top: 5px;
+}
+
+#daily-single-info, #countries-info, #ages-info, #countries-info-pie, #daily-deads-info, #daily-recovers-info {
+    height: 180px;
+}
+
+
+#sex-container, #contagio-container {
+    height: 180px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.card,
+.card-deck > .card,
+#apks-info {
+    margin-bottom: 1em;
+}
+
+#countries-container {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#daily-container-block {
+    padding-left: 15px;
+}
+
+
+#ages-container {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.erase-right {
+    padding-right: 0px;
+}
+
+.erase-left {
+    padding-left: 0px;
+}
+
+#sex-info, #contagio-info {
+    height: 160px;
+}
+
+.bd {
+    font-weight: bold;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0px;
+}
+
+.leaflet-popup-content {
+    margin: 0px;
+}
+
+.small-pname {
+    color: #fff;
+    font-size: 13px;
+    width: 100%;
+    background-color: #166763;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 8px;
+    padding-bottom: 2px;
+}
+
+.small-content {
+    padding-top: 10px;
+}
+
+.small-pname, .small-plink, .small-content {
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+#logo {
+    height: 100px;
+    margin-left: 0px;
+}
+
+.text-block {
+    color: #166763;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#select-map {
+    font-weight: normal;
+}
+
+.map-quote {
+    font-size: 11px;
+    text-align: center;
+}
+
+#team > p {
+    font-weight: bold;
+    color: #166763;
+}
+
+#team {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#team-logos {
+    text-align: center;
+
+}
+
+.team-logo {
+    height: 50px;
+}
+
+#info {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#date {
+    text-align: right;
+}
+
+#map-legend {
+    text-align: center;
+}
+
+#map-legend-container {
+    margin-top: 20px;
+}
+
+#cases0 {
+    color: #D1D2D4;
+}
+
+#countries-comparison, #countries-curve {
+    height: 180px;
+}
+
+#daily-container {
+    margin-top: 5px;
+    height: 260px;
+}
+
+#daily-sum-info, #tests-donut-info {
+    height: 225px;
+}
+
+#tests-line-info {
+    height: 208px;
+}
+
+#countriescurve-info {
+    min-height: 260px;
+    margin-left: 5px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+#countrycurve-select {
+    font-weight: normal;
+}
+
+.sub {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+#countriescurve-block-container {
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.info-note {
+    color: red;
+}
+
+.explain-text{
+	margin-left: 35px;
+	margin-bottom: 15px;
+} 
+
+#curves-evolution {
+	height: 450px;
+}
+
+#cusobu, #fr, #swlx {
+    height: 25px;
+}
+
+#replicas {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header {
+    padding: .25rem 0.85rem;
+}
+
+.card.common-bg .card-header {
+    color: white;
+}
+
+.card.common-bg .card-body {
+    background-color: white;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.card .card-body.common-bg {
+    color: white;
+}
+
+.footer {
+    background-color: rgba(18, 19, 64, 0.2);
+}
+
+#general .card-body {
+    padding: .25em 15px;
+}
+
+#general .card-body span {
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+#general .col-lg-2 {
+    /*padding-right: 0;*/
+}
+
+#general .col-lg-2:last-child {
+    /*padding-right: 15px;*/
+}
+
+#general .card {
+    margin-bottom: 1em;
+}
+
+#general h2 {
+    text-transform: uppercase;
+    font-size: .70em;
+    font-weight: bold;
+}
+
+.navbar-stat {
+    width: 130px;
+    text-align: center;
+    padding: .5em 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-number {
+    font-size: 2em;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    font-size: .75em;
+}
+
+@media (min-width: 576px) {
+
+    #stats-cards > .row > div:nth-child(odd) {
+        padding-right: 7px;
+    }
+
+    #stats-cards > .row > div:nth-child(even) {
+        padding-left: 7px;
+    }
+
+    #top-row > .row > .col-md-3 > .card-deck > section.card:nth-of-type(odd),
+    #line-charts > .card-deck > section.card:nth-of-type(odd) {
+        margin-right: 7px;
+    }
+
+    #top-row > .row > .col-md-3 > .card-deck > section.card:nth-of-type(even),
+    #line-charts > .card-deck > section.card:nth-of-type(even) {
+        margin-left: 7px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #stats-cards > .row > div:nth-child(3n+1) {
+        padding-left: 15px;
+        padding-right: 7px;
+    }
+
+    #stats-cards > .row > div:nth-child(3n+2) {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    #stats-cards > .row > div:nth-child(3n+0) {
+        padding-left: 7px;
+        padding-right: 15px;
+    }
+
+    #top-row > .row > .col-md-3 > .card-deck > section.card:nth-of-type(odd),
+    #top-row > .row > .col-md-3 > .card-deck > section.card:nth-of-type(even) {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    #tables > .card-deck > section.card:nth-of-type(odd) {
+        margin-right: 7px;
+    }
+
+    #tables > .card-deck > section.card:nth-of-type(even) {
+        margin-left: 7px;
+    }
+}

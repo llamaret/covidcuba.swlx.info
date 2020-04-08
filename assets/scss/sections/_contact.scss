@@ -1,0 +1,18 @@
+/*-------------------------
+    Contact Area
+---------------------------*/
+.contact-form-area-02{
+    &.contact-bg{
+        background-image: url(../img/bg/contact-map-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+    .img-wrapper{
+        text-align: right;
+        padding-left: 40px;
+    }
+    .contact-area-wrapper{
+        padding: 0;
+        padding-top: 60px;
+    }
+}

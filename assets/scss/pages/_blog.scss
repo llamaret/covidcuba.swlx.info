@@ -1,0 +1,112 @@
+/*--------------------
+    Blog Page
+--------------------*/
+.single-blog-grid-item{
+    &.white{
+        .content{
+            .post-meta{
+                li{
+                    a{
+                        color: rgba($white,.7);
+                    }
+                }
+            }
+            .title{
+                a{
+                    color: $white;
+                }
+            }
+           .readmore{
+                color: rgba($white,.7);
+           }
+        }
+    }
+    margin-bottom: 25px;
+    .thumb{
+        margin-bottom: 23px;
+    }
+    .content{
+        .title{
+            font-size: 22px;
+            line-height: 32px;
+            margin-bottom: 22px;
+            a{
+                color: $heading-color;
+                @include transition($transition);
+                &:hover{
+                    color: $base-color;
+                }
+            }
+
+        }
+        .post-meta{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            li{
+                display: inline-block;
+                margin: 0 10px;
+                font-size: 14px;
+                a{
+                    color: $descr-color;
+                    @include transition($transition);
+                    &:hover{
+                        color: $base-color;
+                    }
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .readmore{
+            color: $descr-color;
+            @include transition($transition);
+            &:hover{
+                color: $base-color;
+            }
+        }
+    }
+}
+
+.blog-pagination{
+    .pagination{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+        .page-item{
+            display: inline-block;
+            margin: 0 5px;
+            &:first-child{
+                margin-left: 0;
+            }
+            &.active,&:hover{
+               .page-link{
+                    color: $white;
+                    background-image: -moz-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+                    background-image: -webkit-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+                    background-image: -ms-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+               }
+            }
+            .page-link{
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                padding: 0;
+                font-weight: 600;
+                font-size: 14px;
+                border: none;
+                text-align: center;
+                color: $descr-color;
+                @include transition($transition);
+                border: 2px solid #ededed;
+            }
+        }
+    }
+}
