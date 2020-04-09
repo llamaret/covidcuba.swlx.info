@@ -3476,13 +3476,13 @@ ul {
     box-shadow: none; }
 
 .contact-form .form-group .form-control {
-  border: 1px solid #007066;
+  border: 2px solid #007066;
   height: 60px;
   padding: 0 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.1);
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
-  -o-box-shadow: 0 1px 3px rgba(0,0,0,.1);  
+  box-shadow: 0 1px 3px rgba(20,103,99,.5);
+  -webkit-box-shadow: 0 1px 3px rgba(20,103,99,.5);
+  -moz-box-shadow: 0 1px 3px rgba(20,103,99,.5);
+  -o-box-shadow: 0 1px 3px rgba(20,103,99,.5);  
 }
 
 /*------------------------
