@@ -962,7 +962,8 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 "recov": globalInfo.recov,
                                 "male": globalInfo.male,
                                 "female": globalInfo.female,
-                                "sexunknown": globalInfo.sex_unknown
+                                "sexunknown": globalInfo.sex_unknown,
+                                "sujetos_riesgo": globalInfo.sujetos_riesgo
                             };
                         }
 
@@ -1019,6 +1020,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                         });
 
         $('[data-content=diagno]').html(genInfo.total);
+        $('[data-content=ingresados]').html(genInfo.sujetos_riesgo);
         $('[data-content=activo]').html(genInfo.total -(genInfo.deaths + genInfo.gone +genInfo.recov));
         $('[data-content=fallec]').html(genInfo.deaths);
         $('[data-content=evacua]').html(genInfo.gone);
