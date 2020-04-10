@@ -340,6 +340,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             var deadsSingle = ['Muertes en el día'];
                             var recoversSum = ['Altas acumuladas'];
                             var recoversSingle = ['Altas en el día'];
+                            var sujetos_riesgo = 0;
                             var test_days = [];
                             var test_negative = [];
                             var test_positive = [];
@@ -352,6 +353,9 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
 
 
                             for (var i = 1; i <= Object.keys(data.casos.dias).length; i++) {
+                                if (data.casos.dias[i]["sujetos_riesgo"]) {
+                                  sujetos_riesgo = data.casos.dias[i]["sujetos_riesgo"]
+                                }
                                 dias.push('Día ' + i);
                                 dates.push(data.casos.dias[i].fecha.replace('2020/', ''));
                                 if ('diagnosticados' in data.casos.dias[i]) {
@@ -367,20 +371,20 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     test_positive.push(total);
                                 }
                                 if ('recuperados_numero' in data.casos.dias[i]) {
-                    recover += data.casos.dias[i].recuperados_numero;
-                    recoversSingle.push(data.casos.dias[i].recuperados_numero);
-                  } else {
-                    recoversSingle.push(0);
-                  }
-                  if ('muertes_numero' in data.casos.dias[i]) {
-                    deads += data.casos.dias[i].muertes_numero;
-                    deadsSingle.push(data.casos.dias[i].muertes_numero);
-                  } else {
-                    deadsSingle.push(0);
-                  }
-                  if ('evacuados_numero' in data.casos.dias[i]) {
-                    evac += data.casos.dias[i].evacuados_numero;
-                  }
+                                  recover += data.casos.dias[i].recuperados_numero;
+                                  recoversSingle.push(data.casos.dias[i].recuperados_numero);
+                                } else {
+                                  recoversSingle.push(0);
+                                }
+                                if ('muertes_numero' in data.casos.dias[i]) {
+                                  deads += data.casos.dias[i].muertes_numero;
+                                  deadsSingle.push(data.casos.dias[i].muertes_numero);
+                                } else {
+                                  deadsSingle.push(0);
+                                }
+                                if ('evacuados_numero' in data.casos.dias[i]) {
+                                  evac += data.casos.dias[i].evacuados_numero;
+                                }
 
                                 dailySum.push(total);
                                 dailyActive.push(total - (recover + deads + evac));
@@ -900,12 +904,11 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             });
 
 
-                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown};
+                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo};
                         }
 
 
                         var globalInfo = getAllCasesAndSimpleGraphics();
-
 
                         var casos = globalInfo.cases;
 
