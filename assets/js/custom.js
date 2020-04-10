@@ -205,9 +205,9 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     columns: [['Hombres', sex_male], ['Mujeres', sex_female], ['No reportado', sex_unknown]],
                                     type: 'pie',
                                     colors: {
-                                        'Mujeres': '#B01E22',
-                                        'Hombres': '#1C1340',
-                                        'No reportado': '#1A8323'
+                                        'Mujeres': '#520924',
+                                        'Hombres': '#003366',
+                                        'No reportado': '#008E76'
                                     }
                                 }
                             });
@@ -220,9 +220,9 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     columns: [['cubanos', total_cu], ['extranjeros', total_no_cu], ['no reportado', total_unk]],
                                     type: 'pie',
                                     colors: {
-                                        'cubanos': '#B01E22',
-                                        'extranjeros': '#1C1340',
-                                        'no reportado': '#1A8323'
+                                        'cubanos': '#520924',
+                                        'extranjeros': '#003366',
+                                        'no reportado': '#008E76'
                                     }
                                 }
                             });
@@ -234,8 +234,8 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     columns: [['Tests Positivos', total_cu + total_no_cu + total_unk], ['Tests Negativos', total_tests - (total_cu + total_no_cu + total_unk)]],
                                     type: 'donut',
                                     colors: {
-                                        'Tests Positivos': '#B01E22',
-                                        'Tests Negativos': '#1C1340',
+                                        'Tests Positivos': '#520924',
+                                        'Tests Negativos': '#003366',
                                     }
                                 },
                                 donut: {
@@ -262,7 +262,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     ],
                                     type: 'bar',
                                     colors: {
-                                        'Diagnosticados': '#B01E22'
+                                        'Diagnosticados': '#520924'
                                     }
                                 },
                                 axis: {
@@ -299,7 +299,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     ],
                                     type: 'bar',
                                     colors: {
-                                        'Diagnosticados': '#B01E22'
+                                        'Diagnosticados': '#520924'
                                     }
                                 },
                                 axis: {
@@ -321,10 +321,10 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     columns: [['Importado', contagio.importado], ['Introducido', contagio.introducido], ['Autóctono', contagio.autoctono], ['Desconocido', contagio.desconocido]],
                                     type: 'pie',
                                     colors: {
-                                        'Introducido': '#B01E22',
-                                        'Importado': '#1C1340',
-                                        'Autóctono': '#1A8323',
-                                        'Desconocido': '#CA9F31'
+                                        'Introducido': '#520924',
+                                        'Importado': '#003366',
+                                        'Autóctono': '#008E76',
+                                        'Desconocido': '#F16645'
                                     }
                                 }
                             });
@@ -422,9 +422,9 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     type: 'bar',
                                     groups: [['Tests Negativos', 'Tests Positivos']],
                                     colors: {
-                                        'Tests Negativos': '#1C1340',
-                                        'Tests Positivos': '#B01E22',
-                                        'Total de Tests': '#1A8323'
+                                        'Tests Negativos': '#003366',
+                                        'Tests Positivos': '#520924',
+                                        'Total de Tests': '#008E76'
                                     }
                                 },
                                 axis: {
@@ -482,7 +482,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                         ],
                                         type: 'line',
                                         colors: {
-                                            'Cuba': '#B01E22'
+                                            'Cuba': '#520924'
                                         }
                                     },
                                     axis: {
@@ -509,7 +509,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                         ],
                                         type: 'line',
                                         colors: {
-                                            'Cuba': '#B01E22'
+                                            'Cuba': '#520924'
                                         }
                                     },
                                     axis: {
@@ -590,7 +590,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     ],
                                     type: 'line',
                                     colors: {
-                                        'Cuba': '#B01E22'
+                                        'Cuba': '#520924'
                                     }
                                 },
                                 axis: {
@@ -621,7 +621,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                       ],
                                       type: 'line',
                                       colors: {
-                                          'Cuba': '#B01E22'
+                                          'Cuba': '#520924'
                                       }
                                   },
                                   axis: {
@@ -703,7 +703,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     ],
                                     type: 'line',
                                     colors: {
-                                        'Cuba': '#B01E22'
+                                        'Cuba': '#520924'
                                     }
                                 },
                                 axis: {
@@ -734,7 +734,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                       ],
                                       type: 'line',
                                       colors: {
-                                          'Cuba': '#B01E22'
+                                          'Cuba': '#520924'
                                       }
                                   },
                                   axis: {
@@ -800,7 +800,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     type: 'line',
                                     colors: {
                                         'Muertes en el día': '#00577B',
-                                        'Muertes acumuladas': '#1C1340'
+                                        'Muertes acumuladas': '#003366'
                                     }
                                 },
                                 axis: {
@@ -855,7 +855,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     ],
                                     type: 'line',
                                     colors: {
-                                        'Cuba': '#B01E22'
+                                        'Cuba': '#520924'
                                     }
                                 },
                                 axis: {
@@ -882,7 +882,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     ],
                                     type: 'line',
                                     colors: {
-                                        'Cuba': '#B01E22'
+                                        'Cuba': '#520924'
                                     }
                                 },
                                 axis: {
@@ -1259,7 +1259,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                   columns: columdata,
                   type: 'line',
                   colors: {
-                    'Cuba': '#B01E22'
+                    'Cuba': '#520924'
                   }
                 },
               tooltip: {
