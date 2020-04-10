@@ -383,7 +383,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                   }
 
                                 dailySum.push(total);
-                                dailyActive.push(total-(recover+deads+evac));
+                                dailyActive.push(total - (recover + deads + evac));
                                 recoversSum.push(recover);
                                 deadsSum.push(deads);
                                 cuba.push(total);
@@ -537,7 +537,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                   var fill_count = countriesdays.paises[c].length - all_deaths.paises[c].length;
                                   all_deaths.paises[c] = Array(fill_count).fill(0).concat(all_deaths.paises[c]);
                                 }
-                                if (all_deaths.paises[c].length >= cuba.length) {
+                              //  if (all_deaths.paises[c].length >= cuba.length) {
                                     var c_temp = [c];
                                     var d_temp = ['Días'];
                                     for (var i = 1; i < all_deaths.paises[c].length; i++) {
@@ -546,7 +546,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     }
                                     death_curve[c] = {'dias': d_temp, 'data': c_temp};
                                     death_countrysorted.push(c);
-                                }
+                               // }
                             }
                             death_countrysorted.sort();
                             for (var c = 0; c < death_countrysorted.length; c++) {
@@ -650,7 +650,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                   var fill_count = countriesdays.paises[c].length - all_recovers.paises[c].length;
                                   all_recovers.paises[c] = Array(fill_count).fill(0).concat(all_recovers.paises[c]);
                                 }
-                                if (all_recovers.paises[c].length >= cuba.length) {
+                             //   if (all_recovers.paises[c].length >= cuba.length) {
                                     var c_temp = [c];
                                     var d_temp = ['Días'];
                                     for (var i = 1; i < all_recovers.paises[c].length; i++) {
@@ -659,7 +659,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                     }
                                     recover_curve[c] = {'dias': d_temp, 'data': c_temp};
                                     recover_countrysorted.push(c);
-                                }
+                             //   }
                             }
                             recover_countrysorted.sort();
                             for (var c = 0; c < recover_countrysorted.length; c++) {
