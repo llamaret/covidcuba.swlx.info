@@ -14,7 +14,8 @@ var domains = {
     'co': 'Colombia',
     'pe': 'Perú',
     'tz': 'Tanzania',
-    'pa': 'Panamá'
+    'pa': 'Panamá',
+    'bo': 'Bolivia'
 };
 
 
@@ -340,6 +341,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             var deadsSingle = ['Muertes en el día'];
                             var recoversSum = ['Altas acumuladas'];
                             var recoversSingle = ['Altas en el día'];
+                            var cantidad_dias = 0;
                             var sujetos_riesgo = 0;
                             var graves_numero = 0;
                             var muertes_hoy = 0;
@@ -356,6 +358,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
 
 
                             for (var i = 1; i <= Object.keys(data.casos.dias).length; i++) {
+                                cantidad_dias++;
                                 if (data.casos.dias[i]["sujetos_riesgo"]) {
                                   sujetos_riesgo = data.casos.dias[i]["sujetos_riesgo"]
                                 }
@@ -922,7 +925,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             });
 
 
-                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "recuperados_hoy": recuperados_hoy};
+                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "recuperados_hoy": recuperados_hoy, "cantidad_dias": cantidad_dias};
                         }
 
 
@@ -984,7 +987,8 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 "sujetos_riesgo": globalInfo.sujetos_riesgo,
                                 "graves_numero": globalInfo.graves_numero,
                                 "muertes_hoy": globalInfo.muertes_hoy,
-                                "recuperados_hoy": globalInfo.recuperados_hoy
+                                "recuperados_hoy": globalInfo.recuperados_hoy,
+                                "cantidad_dias": globalInfo.cantidad_dias
                             };
                         }
 
@@ -1042,6 +1046,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
 
         $('[data-content=diagno]').html(genInfo.total);
         $('[data-content=ingresados]').html(genInfo.sujetos_riesgo);
+        $('[data-content=dia_pandem]').html(genInfo.cantidad_dias);
         $('[data-content=graves]').html(genInfo.graves_numero);
         $('[data-content=fallec_hoy]').html(genInfo.muertes_hoy);
         $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy);
