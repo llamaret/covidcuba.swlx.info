@@ -341,6 +341,9 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             var recoversSum = ['Altas acumuladas'];
                             var recoversSingle = ['Altas en el día'];
                             var sujetos_riesgo = 0;
+                            var graves_numero = 0;
+                            var muertes_hoy = 0;
+                            var recuperados_hoy = 0;
                             var test_days = [];
                             var test_negative = [];
                             var test_positive = [];
@@ -355,6 +358,21 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             for (var i = 1; i <= Object.keys(data.casos.dias).length; i++) {
                                 if (data.casos.dias[i]["sujetos_riesgo"]) {
                                   sujetos_riesgo = data.casos.dias[i]["sujetos_riesgo"]
+                                }
+                                if (data.casos.dias[i]["graves_numero"]) {
+                                  graves_numero = data.casos.dias[i]["graves_numero"]
+                                }
+                                if (data.casos.dias[i]["muertes_numero"]) {
+                                  muertes_hoy = data.casos.dias[i]["muertes_numero"]
+                                }
+                                else {
+                                  muertes_hoy = 0;  
+                                }
+                                if (data.casos.dias[i]["recuperados_numero"]) {
+                                  recuperados_hoy = data.casos.dias[i]["recuperados_numero"]
+                                }
+                                else {
+                                  recuperados_hoy = 0;  
                                 }
                                 dias.push('Día ' + i);
                                 dates.push(data.casos.dias[i].fecha.replace('2020/', ''));
@@ -904,7 +922,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             });
 
 
-                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo};
+                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "recuperados_hoy": recuperados_hoy};
                         }
 
 
@@ -963,7 +981,10 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 "male": globalInfo.male,
                                 "female": globalInfo.female,
                                 "sexunknown": globalInfo.sex_unknown,
-                                "sujetos_riesgo": globalInfo.sujetos_riesgo
+                                "sujetos_riesgo": globalInfo.sujetos_riesgo,
+                                "graves_numero": globalInfo.graves_numero,
+                                "muertes_hoy": globalInfo.muertes_hoy,
+                                "recuperados_hoy": globalInfo.recuperados_hoy
                             };
                         }
 
@@ -1021,12 +1042,15 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
 
         $('[data-content=diagno]').html(genInfo.total);
         $('[data-content=ingresados]').html(genInfo.sujetos_riesgo);
+        $('[data-content=graves]').html(genInfo.graves_numero);
+        $('[data-content=fallec_hoy]').html(genInfo.muertes_hoy);
+        $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy);
         $('[data-content=activo]').html(genInfo.total -(genInfo.deaths + genInfo.gone +genInfo.recov));
         $('[data-content=fallec]').html(genInfo.deaths);
         $('[data-content=evacua]').html(genInfo.gone);
         $('[data-content=recupe]').html(genInfo.recov);
-            $('[data-content=mortalidad]').html((genInfo.deaths*100/genInfo.total).toFixed(2));
-            $('[data-content=recuperacion]').html((genInfo.recov*100/genInfo.total).toFixed(2));
+        $('[data-content=mortalidad]').html((genInfo.deaths*100/genInfo.total).toFixed(2));
+        $('[data-content=recuperacion]').html((genInfo.recov*100/genInfo.total).toFixed(2));
 
                         var geojsonM = L.geoJSON(municipios, {style: styleM});
 
