@@ -346,6 +346,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             var graves_numero = 0;
                             var muertes_hoy = 0;
                             var recuperados_hoy = 0;
+                            var casos_hoy = 0;
                             var test_days = [];
                             var test_negative = [];
                             var test_positive = [];
@@ -382,8 +383,10 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 if ('diagnosticados' in data.casos.dias[i]) {
                                     dailySingle.push(data.casos.dias[i]['diagnosticados'].length);
                                     total += data.casos.dias[i]['diagnosticados'].length;
+                                    casos_hoy = data.casos.dias[i]['diagnosticados'].length;
                                 } else {
                                     dailySingle.push(0);
+                                    casos_hoy = 0;
                                 }
                                 if ('tests_total' in data.casos.dias[i]) {
                                     test_days.push(data.casos.dias[i].fecha.replace('2020/', ''));
@@ -925,7 +928,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             });
 
 
-                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "recuperados_hoy": recuperados_hoy, "cantidad_dias": cantidad_dias};
+                            return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "sujetos_riesgo": sujetos_riesgo, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "recuperados_hoy": recuperados_hoy, "cantidad_dias": cantidad_dias, "casos_hoy": casos_hoy};
                         }
 
 
@@ -988,7 +991,8 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 "graves_numero": globalInfo.graves_numero,
                                 "muertes_hoy": globalInfo.muertes_hoy,
                                 "recuperados_hoy": globalInfo.recuperados_hoy,
-                                "cantidad_dias": globalInfo.cantidad_dias
+                                "cantidad_dias": globalInfo.cantidad_dias,
+                                "casos_hoy": globalInfo.casos_hoy
                             };
                         }
 
@@ -1050,6 +1054,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
         $('[data-content=graves]').html(genInfo.graves_numero);
         $('[data-content=fallec_hoy]').html(genInfo.muertes_hoy);
         $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy);
+        $('[data-content=diagno_hoy]').html(genInfo.casos_hoy);
         $('[data-content=activo]').html(genInfo.total -(genInfo.deaths + genInfo.gone +genInfo.recov));
         $('[data-content=fallec]').html(genInfo.deaths);
         $('[data-content=evacua]').html(genInfo.gone);
@@ -1261,6 +1266,17 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
             var topn=20;
                     countrysorted2.sort((a,b)=> curves2[b]['ctotal']-curves2[a]['ctotal']);
             var $table_country = $('#table-countries > tbody');
+            
+            for(var i = 0; i < countrysorted2.length; i++){
+                var row = ("<tr><td>{ranking}</td>" +
+                                "<td>{country}</td>" +
+                                "<td>{cases}</td></tr>")
+                                .replace("{ranking}", i+1)
+                                .replace("{country}", curves2[countrysorted2[i]]['weeks'][0])
+                                .replace('{cases}', curves2[countrysorted2[i]]['ctotal']);
+                        $table_country.append(row);
+            }
+            
             for(var i=0;i<countrysorted2.length;i++){
               xaxisdata[countrysorted2[i]]='Confirmados-'+countrysorted2[i];
               columdata.push(curves2[countrysorted2[i]]['weeks']);
@@ -1268,13 +1284,6 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
 
               if(cont==topn){break;}
               cont+=1;
-                                var row = ("<tr><td>{ranking}</td>" +
-                                "<td>{country}</td>" +
-                                "<td>{cases}</td></tr>")
-                                .replace("{ranking}", i+1)
-                                .replace("{country}", curves2[countrysorted2[i]]['weeks'][0])
-                                .replace('{cases}', curves2[countrysorted2[i]]['ctotal']);
-                        $table_country.append(row);
             }
 
             xaxisdata['Cuba']='Confirmados-Cuba';
