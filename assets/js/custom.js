@@ -694,7 +694,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 var cc = recover_curve[recover_countrysorted[c]]['data'][0];
                                 $('#recovercurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
-                            recovers_cuba = Array(cuba.length - recoversSum.length).fill(0).concat(recoversSum.slice(1, recoversSum.length));
+                            recovers_cuba = Array(cuba.length - recoversSum.length).fill(0).concat(recoversSum.slice(0, recoversSum.length));
                             recovers_cuba[0] = "Cuba";
 
                             var recover_countryselected = 'Cambodia';
