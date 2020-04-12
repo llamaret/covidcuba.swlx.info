@@ -581,7 +581,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 var cc = death_curve[death_countrysorted[c]]['data'][0];
                                 $('#deathcurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
-                            deaths_cuba = Array(cuba.length - deadsSum.length).fill(0).concat(deadsSum.slice(1, deadsSum.length));
+                            deaths_cuba = Array(cuba.length - deadsSum.length).fill(0).concat(deadsSum.slice(0, deadsSum.length));
                             deaths_cuba[0] = "Cuba";
 
                             var death_countryselected = 'Cambodia';
