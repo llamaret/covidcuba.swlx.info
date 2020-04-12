@@ -581,7 +581,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 var cc = death_curve[death_countrysorted[c]]['data'][0];
                                 $('#deathcurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
-                            deaths_cuba = Array(cuba.length - deadsSum.length).fill(0).concat(deadsSum.slice(0, deadsSum.length));
+                            deaths_cuba = deadsSum.slice()
                             deaths_cuba[0] = "Cuba";
 
                             var death_countryselected = 'Cambodia';
@@ -694,7 +694,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 var cc = recover_curve[recover_countrysorted[c]]['data'][0];
                                 $('#recovercurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
-                            recovers_cuba = Array(cuba.length - recoversSum.length).fill(0).concat(recoversSum.slice(0, recoversSum.length));
+                            recovers_cuba = recoversSum.slice()
                             recovers_cuba[0] = "Cuba";
 
                             var recover_countryselected = 'Cambodia';
