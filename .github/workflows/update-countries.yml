@@ -1,7 +1,7 @@
 on:
 
   schedule:
-    - cron: '30 * * * *'
+    - cron: '5 * * * *'
 
   push:
     branches:
@@ -24,8 +24,6 @@ jobs:
       - name: Get countries Json
         run: |
           python utils/update_countries.py
-          python utils/update_death_countries.py
-          python utils/update_recovered_countries.py
           git config --global user.name 'llamaret'
           git config --global user.email 'llamaret@webmisolutions.com'
           git add .
