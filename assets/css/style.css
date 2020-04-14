@@ -4514,3 +4514,12 @@ overflow: auto;
 .table-wrapper-scroll-y {
 display: block;
 }
+
+.nav-tabs .nav-link {
+    color: #fff;
+}
+
+/*Fixing C3*/
+.c3-event-rect{
+    width: auto !important;
+}

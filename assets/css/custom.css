@@ -256,7 +256,7 @@ body > div {
     color: #D1D2D4;
 }
 
-#countries-comparison, #countries-curve {
+#countries-comparison, #countries-curve, #deaths-comparison, #deaths-curve, #recovers-comparison, #recovers-curve, #countries-comparison-container {
     height: 180px;
 }
 
@@ -385,6 +385,22 @@ body > div {
     font-size: .75em;
 }
 
+/*Cambios de Grabriel para el card multi nav*/
+#compari > .card-header > ul.nav{
+    margin-top: .3em;
+    margin-bottom: -0.5rem;
+}
+
+#compari > .card-header > ul.nav > li > a:not([class*='active']){
+    color: white;
+}
+
+#compari .text-block.sub{
+    text-align: center;
+    margin-bottom: 1em;
+}
+/*Fin de Cambios de Grabriel para el card multi nav*/
+
 @media (min-width: 576px) {
 
     #stats-cards > .row > div:nth-child(odd) {
@@ -437,3 +453,20 @@ body > div {
         margin-left: 7px;
     }
 }
+
+/*MediaQueries de Gabriel*/
+@media(min-width: 768px){
+    #compari > .card-header > .py-1{
+        float: left;
+    }
+
+    #compari > .card-header > ul.nav-justified{
+        float: right;
+    }
+
+    #compari > .card-header > ul.nav-justified > li{
+        flex-basis: auto;
+        flex-grow: 0;
+    }
+}
+/*Fin de MediaQueries de Gabriel*/

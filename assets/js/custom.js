@@ -483,7 +483,7 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                                 var cc = curves[countrysorted[c]]['data'][0];
                                 $('#countrycurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
-                            var countryselected = 'Hungary';
+                            var countryselected = 'El Salvador';
                             $('#countrycurve-select').val(countryselected);
                             $('.countries-date').html(countriesdays['dia-actualizacion']);
 
@@ -579,18 +579,18 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             death_countrysorted.sort();
                             for (var c = 0; c < death_countrysorted.length; c++) {
                                 var cc = death_curve[death_countrysorted[c]]['data'][0];
-                                $('#deathcurve-select').append('<option value="' + cc + '">' + cc + '</option>');
+                                $('#countrycurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
                             deaths_cuba = deadsSum.slice()
                             deaths_cuba[0] = "Cuba";
 
-                            var death_countryselected = 'Cambodia';
+                            var death_countryselected = 'El Salvador';
 
-                            $('#deathcurve-select').val(death_countryselected);
+                            $('#countrycurve-select').val(death_countryselected);
                             $('.deaths-date').html(all_deaths['dia-actualizacion']);
 
-                            $('#deathcurve-select').on('change', function () {
-                                var val = $('#deathcurve-select').val();
+                            $('#countrycurve-select').on('change', function () {
+                                var val = $('#countrycurve-select').val();
                                 death_comparison.unload({ids: death_countryselected});
                                 death_graph.unload({ids: death_countryselected});
                                 death_countryselected = val;
@@ -692,18 +692,18 @@ $.getJSON("assets/data/paises-recovered-dias.json", function (all_recovers) {
                             recover_countrysorted.sort();
                             for (var c = 0; c < recover_countrysorted.length; c++) {
                                 var cc = recover_curve[recover_countrysorted[c]]['data'][0];
-                                $('#recovercurve-select').append('<option value="' + cc + '">' + cc + '</option>');
+                                $('#countrycurve-select').append('<option value="' + cc + '">' + cc + '</option>');
                             }
                             recovers_cuba = recoversSum.slice()
                             recovers_cuba[0] = "Cuba";
 
-                            var recover_countryselected = 'Cambodia';
+                            var recover_countryselected = 'El Salvador';
 
-                            $('#recovercurve-select').val(recover_countryselected);
+                            $('#countrycurve-select').val(recover_countryselected);
                             $('.recovers-date').html(all_recovers['dia-actualizacion']);
 
-                            $('#recovercurve-select').on('change', function () {
-                                var val = $('#recovercurve-select').val();
+                            $('#countrycurve-select').on('change', function () {
+                                var val = $('#countrycurve-select').val();
                                 recover_comparison.unload({ids: recover_countryselected});
                                 recover_graph.unload({ids: recover_countryselected});
                                 recover_countryselected = val;
