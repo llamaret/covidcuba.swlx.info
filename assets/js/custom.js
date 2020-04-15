@@ -556,18 +556,18 @@ $.getJSON("assets/data/paises-info-dias.json", function(countriesdays) {
           death_countrysorted.sort();
           for (var c = 0; c < death_countrysorted.length; c++) {
             var cc = death_curve[death_countrysorted[c]]["data"][0];
-            $("#countrycurve-select").append('<option value="' + cc + '">' + cc + "</option>");
+            $("#deathcurve-select").append('<option value="' + cc + '">' + cc + "</option>");
           }
           deaths_cuba = deadsSum.slice();
           deaths_cuba[0] = "Cuba";
 
           var death_countryselected = "El Salvador";
 
-          $("#countrycurve-select").val(death_countryselected);
+          $("#deathcurve-select").val(death_countryselected);
           $(".deaths-date").html(countriesdays["dia-actualizacion"]);
 
-          $("#countrycurve-select").on("change", function() {
-            var val = $("#countrycurve-select").val();
+          $("#deathcurve-select").on("change", function() {
+            var val = $("#deathcurve-select").val();
             death_comparison.unload({ ids: death_countryselected });
             death_graph.unload({ ids: death_countryselected });
             death_countryselected = val;
@@ -662,18 +662,18 @@ $.getJSON("assets/data/paises-info-dias.json", function(countriesdays) {
           recover_countrysorted.sort();
           for (var c = 0; c < recover_countrysorted.length; c++) {
             var cc = recover_curve[recover_countrysorted[c]]["data"][0];
-            $("#countrycurve-select").append('<option value="' + cc + '">' + cc + "</option>");
+            $("#recovercurve-select").append('<option value="' + cc + '">' + cc + "</option>");
           }
           recovers_cuba = recoversSum.slice();
           recovers_cuba[0] = "Cuba";
 
           var recover_countryselected = "El Salvador";
 
-          $("#countrycurve-select").val(recover_countryselected);
+          $("#recovercurve-select").val(recover_countryselected);
           $(".recovers-date").html(countriesdays["dia-actualizacion"]);
 
-          $("#countrycurve-select").on("change", function() {
-            var val = $("#countrycurve-select").val();
+          $("#recovercurve-select").on("change", function() {
+            var val = $("#recovercurve-select").val();
             recover_comparison.unload({ ids: recover_countryselected });
             recover_graph.unload({ ids: recover_countryselected });
             recover_countryselected = val;

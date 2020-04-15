@@ -485,84 +485,83 @@
             <div class="container-fluid content-center">
             <h4>Evolución de casos en Cuba respecto a otros países</h4>
                 <div class="card common-bg wow zoomIn">
-                    <div class="card-header">
-            <div class="">
-                Comparación de Cuba con <select id="countrycurve-select"></select>
-            </div>
-            <ul class="nav nav-tabs nav-justified card-header-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#tab-activos">
-                        <i class="fa fa-heartbeat d-block d-sm-none d-md-block d-lg-none"></i> <span
-                            class="d-none d-sm-block d-md-none d-lg-block">Activos</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#tab-recuperados">
-                        <i class="fa fa-heart d-block d-sm-none d-md-block d-lg-none"></i> <span
-                            class="d-none d-sm-block d-md-none d-lg-block">Recuperados</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#tab-fallecidos">
-                        <i class="fa fa-heart-broken d-sm-none d-md-block d-lg-none"></i> <span
-                            class="d-none  d-sm-block d-md-none d-lg-block">Fallecidos</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <div class="card-header">Comparación de Cuba respecto a casos confirmados con  <select id="countrycurve-select"></select></div>
             <div class="card-body">
-                            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane show active" id="tab-activos" role="tabpanel">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="text-block sub">
-                                Comparación en general
-                            </div>
-                            <div id="countries-curve"></div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="text-block sub">
+                            Comparación general
                         </div>
-                        <div id="countries-comparison-container" class="col-md-6">
-                            <div class="text-block sub">
-                                Comparación en el período de Cuba
-                            </div>
-                            <div id="countries-comparison"></div>
-                        </div>
+                        <div id="countries-curve"></div>
+
                     </div>
-                </div>
-                <div class="tab-pane" id="tab-recuperados" role="tabpanel">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="text-block sub">
-                                Comparación en general
-                            </div>
-                            <div id="recovers-curve"></div>
+                    <div id="countries-comparison-container" class="col-lg-6 col-md-6">
+                        <div class="text-block sub">
+                            Comparación en el período de Cuba 
                         </div>
-                        <div id="countries-comparison-container" class="col-md-6">
-                            <div class="text-block sub">
-                                Comparación en el período de Cuba
-                            </div>
-                            <div id="recovers-comparison"></div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab-fallecidos" role="tabpanel">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="text-block sub">
-                                Comparación en general
-                            </div>
-                            <div id="deaths-curve"></div>
-                        </div>
-                        <div id="countries-comparison-container" class="col-md-6">
-                            <div class="text-block sub">
-                                Comparación en el período de Cuba
-                            </div>
-                            <div id="deaths-comparison"></div>
-                        </div>
-                        </div>
+                        <div id="countries-comparison"></div>
                     </div>
                 </div>
                 <div class="map-quote">
-                    <br>* Datos de los países tomados de <a href="https://github.com/pomber/covid19">pomber/covid19</a> y actualizado el <span class="countries-date">#</span><br>
+                    * Datos de los países tomados de <a href="https://github.com/pomber/covid19">pomber/covid19</a> y actualizado el <span class="countries-date">#</span><br>
+                </div>
+            </div>
+        </div>
+            </div>
+    </section>
+    
+    <section class="counterup-area" id="paises">
+            <div class="container-fluid content-center">
+            <h4>Évolution de muertes en Cuba respecto a otros países</h4>
+                <div class="card common-bg wow zoomIn">
+            <div class="card-header">Comparación de Cuba respecto a muertes con <select id="deathcurve-select"></select></div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="text-block sub">
+                            Comparación general
+                        </div>
+                        <div id="deaths-curve"></div>
+
+                    </div>
+                    <div id="countries-comparison-container" class="col-lg-6 col-md-6">
+                        <div class="text-block sub">
+                            Comparación en el período de Cuba
+                        </div>
+                        <div id="deaths-comparison"></div>
+                    </div>
+                </div>
+                <div class="map-quote">
+                    * Datos de los países tomados de <a href="https://github.com/pomber/covid19">pomber/covid19</a> y actualizado el <span class="countries-date">#</span><br>
+                </div>
+            </div>
+        </div>
+            </div>
+    </section>
+    
+    <section class="counterup-area" id="paises">
+            <div class="container-fluid content-center">
+            <h4>Évolution de recuperados en Cuba respecto a otros países</h4>
+                <div class="card common-bg wow zoomIn">
+            <div class="card-header">Comparación de Cuba respecto a recuperados con  <select id="recovercurve-select"></select></div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="text-block sub">
+                            Comparación general
+                        </div>
+                        <div id="recovers-curve"></div>
+
+                    </div>
+                    <div id="countries-comparison-container" class="col-lg-6 col-md-6">
+                        <div class="text-block sub">
+                            Comparaison en el período de Cuba
+                        </div>
+                        <div id="recovers-comparison"></div>
+                    </div>
+                </div>
+                <div class="map-quote">
+                    * Datos de los países tomados de <a href="https://github.com/pomber/covid19">pomber/covid19</a> y actualizado el <span class="countries-date">#</span><br>
                 </div>
             </div>
         </div>
