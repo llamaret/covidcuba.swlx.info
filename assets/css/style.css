@@ -4519,7 +4519,11 @@ display: block;
     color: #fff;
 }
 
-/*Fixing C3*/
-.c3-event-rect{
-    width: auto !important;
+.common-bg {
+    background-color: #007469;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    border: none;
 }

@@ -40,16 +40,11 @@ body > div {
 }
 
 .bg-dark {
-    background: #166763 !important;
+    background: #007469 !important;
 }
 
 .common-bg {
-    background-color: #007469;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    -o-box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    border: none;
+    border-color: #007469;
 }
 
 #apks-info {
@@ -59,7 +54,7 @@ body > div {
 #apks-info > a {
     text-decoration: none;
     font-weight: bold;
-    color: #166763;
+    color: #007469;
 }
 
 #apks-info > a:hover {
@@ -73,7 +68,7 @@ body > div {
 
 #map-mun, #map-pro {
     background-color: #ffffff;
-    min-height: 371px;
+    min-height: 383px;
 }
 
 #project {
@@ -93,12 +88,12 @@ body > div {
     border-bottom-style: solid;
     border-left-style: solid;
     border-right-style: solid;
-    border-color: #166763;
+    border-color: #007469;
 }
 
 #gen-info {
     color: #ffffff;
-    background-color: #166763;
+    background-color: #007469;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 0.8rem;
@@ -179,7 +174,7 @@ body > div {
     color: #fff;
     font-size: 13px;
     width: 100%;
-    background-color: #166763;
+    background-color: #007469;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding-top: 8px;
@@ -201,7 +196,7 @@ body > div {
 }
 
 .text-block {
-    color: #166763;
+    color: #007469;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -217,7 +212,7 @@ body > div {
 
 #team > p {
     font-weight: bold;
-    color: #166763;
+    color: #007469;
 }
 
 #team {
@@ -256,7 +251,7 @@ body > div {
     color: #D1D2D4;
 }
 
-#countries-comparison, #countries-curve, #deaths-comparison, #deaths-curve, #recovers-comparison, #recovers-curve, #countries-comparison-container {
+#countries-comparison, #countries-curve {
     height: 180px;
 }
 
@@ -270,6 +265,10 @@ body > div {
 }
 
 #tests-line-info {
+    height: 208px;
+}
+
+#daily-porciento-positivos {
     height: 208px;
 }
 
@@ -299,13 +298,13 @@ body > div {
     color: red;
 }
 
-.explain-text{
-	margin-left: 35px;
-	margin-bottom: 15px;
-} 
+.explain-text {
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
 
 #curves-evolution {
-	height: 450px;
+    height: 450px;
 }
 
 #cusobu, #fr, #swlx {
@@ -324,6 +323,7 @@ body > div {
 
 .card.common-bg .card-header {
     color: white;
+    background: #007469;
 }
 
 .card.common-bg .card-body {
@@ -376,8 +376,32 @@ body > div {
     margin: 0;
 }
 
+.navbar-stats > .card {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    width: 142px;
+}
+
+.navbar-stats > .card > .card-body {
+    padding: 5px 15px;
+    line-height: 1;
+    font-size: 2.5em;
+}
+
+.navbar-stats > .card > .card-footer {
+    padding: 2px 10px;
+    font-size: .75em;
+}
+
 .stat-number {
     font-size: 2em;
+}
+
+.stat-number i {
+    padding: 8px;
 }
 
 .stat-label {
@@ -385,7 +409,10 @@ body > div {
     font-size: .75em;
 }
 
-/*Cambios de Grabriel para el card multi nav*/
+[data-view="province"] {
+    display: none !important;
+}
+
 #compari > .card-header > ul.nav{
     margin-top: .3em;
     margin-bottom: -0.5rem;
@@ -399,7 +426,10 @@ body > div {
     text-align: center;
     margin-bottom: 1em;
 }
-/*Fin de Cambios de Grabriel para el card multi nav*/
+
+#compari .fa{
+    line-height: 1.3;
+}
 
 @media (min-width: 576px) {
 
@@ -412,14 +442,25 @@ body > div {
     }
 
     #top-row > .row > .col-md-3 > .card-deck > section.card:nth-of-type(odd),
-    #line-charts > .card-deck > section.card:nth-of-type(odd) {
+    #line-charts > .card-deck-2 > section.card:nth-of-type(odd) {
         margin-right: 7px;
     }
 
     #top-row > .row > .col-md-3 > .card-deck > section.card:nth-of-type(even),
-    #line-charts > .card-deck > section.card:nth-of-type(even) {
+    #line-charts > .card-deck-2 > section.card:nth-of-type(even) {
         margin-left: 7px;
     }
+
+    .card-deck-3 > .card:nth-child(1) {
+        margin-left: 15px;
+        margin-right: 7px !important;
+    }
+
+    .card-deck-3 > .card:nth-child(2) {
+        margin-left: 7px !important;
+        margin-right: 15px !important;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -445,18 +486,19 @@ body > div {
         margin-right: 15px;
     }
 
-    #tables > .card-deck > section.card:nth-of-type(odd) {
+    #tables > .card-deck > section.card:nth-of-type(odd),
+    #national-comparison > .card-deck > section.card:nth-of-type(odd),
+    #top-countries > .card-deck > section.card:nth-of-type(odd) {
         margin-right: 7px;
     }
 
-    #tables > .card-deck > section.card:nth-of-type(even) {
+    #tables > .card-deck > section.card:nth-of-type(even),
+    #national-comparison > .card-deck > section.card:nth-of-type(even),
+    #top-countries > .card-deck > section.card:nth-of-type(even) {
         margin-left: 7px;
     }
-}
-
-/*MediaQueries de Gabriel*/
-@media(min-width: 768px){
-    #compari > .card-header > .py-1{
+  
+    #compari > .card-header > form{
         float: left;
     }
 
@@ -469,4 +511,23 @@ body > div {
         flex-grow: 0;
     }
 }
-/*Fin de MediaQueries de Gabriel*/
+
+@media (min-width: 992px) {
+
+    .card-deck-3 > .card:nth-of-tpe(3n+1) {
+        margin-left: 15px;
+        margin-right: 7px !important;
+    }
+
+    .card-deck-3 > .card:nth-of-type(3n+2) {
+        margin-left: 7px !important;
+        margin-right: 7px !important;
+    }
+
+    .card-deck-3 > .card:nth-of-type(3n+0) {
+        margin-left: 7px !important;
+        margin-right: 15px !important;
+    }
+}
+
+
