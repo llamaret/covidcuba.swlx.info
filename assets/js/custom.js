@@ -908,7 +908,7 @@ function run_calculations() {
 
                         var countrysorted = [];
                         for (var c in countriesdays.paises_info) {
-                            if ((countriesdays.paises_info[c].confirmed.length + 1) >= cuba.length) {
+                     //       if ((countriesdays.paises_info[c].confirmed.length + 1) >= cuba.length) {
                                 if (!(c in trans_countries))
                                     trans_countries[c] = c;
                                 let c_temp = [trans_countries[c]];
@@ -938,7 +938,7 @@ function run_calculations() {
                                 curves_active[trans_countries[c]] = {'dias': d_temp, 'data': c_a_temp};
                                 curves_daily[trans_countries[c]] = {'dias': d_temp, 'data': c_day_temp};
                                 countrysorted.push(trans_countries[c]);
-                            }
+                     //       }
                         }
 
                         countrysorted.sort();
