@@ -99,7 +99,7 @@
             <div class="collapse navbar-collapse" id="appside_main_menu">
                 <ul class="navbar-nav">
                     <li><a href="#datos">Datos</a></li>
-                    <li><a href="#datos2">Tests</a></li>
+                    <li><a href="#tests-deck">Tests</a></li>
                     <li><a href="#mapa">Zonas Geográficas</a></li>
                     <li><a href="#paises">Países</a></li>
                     <li><a href="#consejos">Consejos</a></li>
@@ -183,7 +183,7 @@
                             </div>
                         </div><!-- //. single counter item -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
                                 <h4 class="number"><span class="fa fa-hospital"></span> <span data-content="activo"><span class="fa fa-spinner fa-spin"></span></span></h4>
@@ -191,7 +191,7 @@
                             </div>
                         </div><!-- //. single counter item -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
                                 <h4 class="number"><span class="fa fa-plane-departure"></span> <span data-content="evacua"><span class="fa fa-spinner fa-spin"></span></span></h4>
@@ -199,7 +199,7 @@
                             </div>
                         </div><!-- //. single counter item -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
                                 <h4 class="number"><span class="fa fa-thumbs-down"></span> <span data-content="fallec"><span class="fa fa-spinner fa-spin"></span></span></h4>
@@ -207,7 +207,7 @@
                             </div>
                         </div><!-- //. single counter item -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
                                 <h4 class="number"><span class="fa fa-heart-broken"></span> <span data-content="mortalidad"><span class="fa fa-spinner fa-spin"></span></span> %</h4>
@@ -215,7 +215,7 @@
                             </div>
                         </div><!-- //. single counter item -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
                                 <h4 class="number"><span class="fa fa-thumbs-up"></span> <span data-content="recupe"><span class="fa fa-spinner fa-spin"></span></span></h4>
@@ -223,7 +223,7 @@
                             </div>
                         </div><!-- //. single counter item -->
                     </div>                    
-                    <div class="col-lg-3 col-md-6">
+                    <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
                                 <h4 class="number"><span class="fa fa-heart"></span> <span data-content="recuperacion"><span class="fa fa-spinner fa-spin"></span></span> %</h4>
@@ -252,84 +252,84 @@
                     <div class="feature-area">
                         <ul class="feature-list">
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="sexdist">
                                           <div class="card common-bg mt-1">
                                               <div class="card-header content-center">Casos por Sexo <span class="fa fa-restroom"></span></div>
                                               <div class="card-body">
                                               <div id="sex-info"></div>
                                               </div>
                                           </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="caudist">
                                             <div class="card common-bg mt-1">
                                                 <div class="card-header content-center">Casos por Modo de Contagio <span class="fa fa-sad-tear"></span></div>
                                                 <div class="card-body">
                                                     <div id="contagio-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="homdist">
                                             <div class="card common-bg mt-1">
                                                 <div class="card-header content-center">Casos por nacionalidad <span class="fa fa-globe"></span></div>
                                                 <div class="card-body">
                                                     <div id="countries-info-pie"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="fordist">
                                             <div class="card common-bg mt-1">
                                                 <div class="card-header content-center">Distribución por nacionalidad de casos extranjeros <span class="fa fa-globe-americas"></span></div>
                                                 <div class="card-body">
                                                     <div id="countries-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="agedist">
                                             <div class="card common-bg mt-1">
                                                 <div class="card-header content-center">Distribución por rangos etarios <span class="fa fa-address-card"></span></div>
                                                 <div class="card-body">
                                                     <div id="ages-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="casdist">
                                             <div class="card common-bg  mt-1">
                                                 <div class="card-header content-center">Evolución de casos por días <span class="fa fa-calendar-alt"></span></div>
                                                 <div class="card-body">
                                                     <div id="daily-single-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>                            
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="recdist">
                                             <div class="card common-bg mt-1">
                                                 <div class="card-header content-center">Evolución de altas por días <span class="fa fa-walking"></span></div>
                                                 <div class="card-body">
                                                     <div id="daily-recovers-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-6">
-                                <div class="content">
+                                <section class="content" id="deadist">
                                             <div class="card common-bg mt-1">
                                                 <div class="card-header content-center">Evolución de muertes por días <span class="fa fa-book-dead"></span></div>
                                                 <div class="card-body">
                                                     <div id="daily-deads-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                         </ul>
                     </div>
@@ -337,25 +337,25 @@
             </div><hr>
         </div>
     </section>
-    <section class="about-us-area style-two" id="datos2">
-        <div class="container-fluid content-center">
+    <section class="about-us-area style-two" id="noshow">
+        <div class="container-fluid content-center" id="tests-deck">
         <h4>Estadísticas de Tests realizados (Real-Time PCR)</h4>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="feature-area">
                         <ul class="feature-list">
                             <li class="single-feature-list wow zoomIn col-lg-4">
-                                <div class="content">
+                                <section class="content" id="tesmade-pcr">
                                             <div class="card common-bg  mt-1">
                                                 <div class="card-header content-center">Relación de tests realizados <span class="fa fa-vial"></span></div>
                                                 <div class="card-body">
                                                     <div id="tests-donut-info"></div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-4">
-                                <div class="content">
+                                <section class="content" id="tesacum">
                                             <div class="card common-bg  mt-1">
                                                 <div class="card-header content-center">Tests por días <span class="fa fa-vials"></span></div>
                                                 <div class="card-body">
@@ -365,10 +365,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                             <li class="single-feature-list wow zoomIn col-lg-4">
-                                <div class="content">
+                                <section class="content" id="testspor">
                                             <div class="card common-bg  mt-1">
                                                 <div class="card-header content-center">% de Tests Positivos respecto al Total <span class="fa fa-vials"></span></div>
                                                 <div class="card-body">
@@ -378,7 +378,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                </div>
+                                </section>
                             </li>
                         </ul>
                     </div>
@@ -450,10 +450,9 @@
                         </div><!-- //. section title -->
                     </div>
                 </div>
-                <div class="row  mt-1">
-                    <div id="topprov" class="col-md-6 pr-xs-3 wow zoomIn">
-                        <div class="card common-bg mt-1">
-                            <div class="card-header content-center">TOP10 Provincias Más Afectadas</div>
+                <div class="card-deck card-deck-2">
+                        <section id="topprov" class="card common-bg ">
+                            <div class="card-header content-center">Provincias Afectadas</div>
                             <div class="card-body p-0 table-wrapper-scroll-y my-custom-scrollbar">
                                 <table  id="table-pro" class="table table-striped table-sm mb-0">
                                     <thead>
@@ -468,11 +467,9 @@
                                     <tbody></tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow zoomIn">
-                        <div class="card common-bg mt-1">
-                            <div class="card-header content-center">TOP10 Municipios Más Afectados</div>
+                        </section>
+                        <section id="topmuni" class="card common-bg ">
+                            <div class="card-header content-center">Municipios Afectados</div>
                             <div class="card-body p-0 table-wrapper-scroll-y my-custom-scrollbar">
                                 <table id="table-mun" class="table table-striped table-sm mb-0">
                                     <thead>
@@ -486,8 +483,7 @@
                                     <tbody></tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
+                        </section>
                 </div>
         
             </div>
@@ -851,7 +847,7 @@
             <div class="bg-shape-2">
                 <img src="assets/img/bg/contact-map-bg.jpg" alt="">
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="download-area-wrapper"><!-- download area wrapper -->
