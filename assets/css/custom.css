@@ -40,11 +40,11 @@ body > div {
 }
 
 .bg-dark {
-    background: #1C1340 !important;
+    background: #007469 !important;
 }
 
 .common-bg {
-    background-color: #1C1340;
+    background-color: #007469;
 }
 
 #apks-info {
@@ -54,7 +54,7 @@ body > div {
 #apks-info > a {
     text-decoration: none;
     font-weight: bold;
-    color: #1C1340;
+    color: #007469;
 }
 
 #apks-info > a:hover {
@@ -88,12 +88,12 @@ body > div {
     border-bottom-style: solid;
     border-left-style: solid;
     border-right-style: solid;
-    border-color: #1C1340;
+    border-color: #007469;
 }
 
 #gen-info {
     color: #ffffff;
-    background-color: #1C1340;
+    background-color: #007469;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 0.8rem;
@@ -174,7 +174,7 @@ body > div {
     color: #fff;
     font-size: 13px;
     width: 100%;
-    background-color: #1C1340;
+    background-color: #007469;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding-top: 8px;
@@ -196,7 +196,7 @@ body > div {
 }
 
 .text-block {
-    color: #1C1340;
+    color: #007469;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -212,7 +212,7 @@ body > div {
 
 #team > p {
     font-weight: bold;
-    color: #1C1340;
+    color: #007469;
 }
 
 #team {
