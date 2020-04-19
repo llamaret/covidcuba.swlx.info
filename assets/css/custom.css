@@ -40,11 +40,11 @@ body > div {
 }
 
 .bg-dark {
-    background: #007469 !important;
+    background: #1C1340 !important;
 }
 
 .common-bg {
-    border-color: #007469;
+    background-color: #1C1340;
 }
 
 #apks-info {
@@ -54,7 +54,7 @@ body > div {
 #apks-info > a {
     text-decoration: none;
     font-weight: bold;
-    color: #007469;
+    color: #1C1340;
 }
 
 #apks-info > a:hover {
@@ -88,12 +88,12 @@ body > div {
     border-bottom-style: solid;
     border-left-style: solid;
     border-right-style: solid;
-    border-color: #007469;
+    border-color: #1C1340;
 }
 
 #gen-info {
     color: #ffffff;
-    background-color: #007469;
+    background-color: #1C1340;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 0.8rem;
@@ -174,7 +174,7 @@ body > div {
     color: #fff;
     font-size: 13px;
     width: 100%;
-    background-color: #007469;
+    background-color: #1C1340;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding-top: 8px;
@@ -196,7 +196,7 @@ body > div {
 }
 
 .text-block {
-    color: #007469;
+    color: #1C1340;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -212,7 +212,7 @@ body > div {
 
 #team > p {
     font-weight: bold;
-    color: #007469;
+    color: #1C1340;
 }
 
 #team {
@@ -239,12 +239,12 @@ body > div {
     text-align: right;
 }
 
-#map-legend {
+.map-legend {
     text-align: center;
 }
 
 #map-legend-container {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #cases0 {
@@ -323,7 +323,6 @@ body > div {
 
 .card.common-bg .card-header {
     color: white;
-    background: #007469;
 }
 
 .card.common-bg .card-body {
