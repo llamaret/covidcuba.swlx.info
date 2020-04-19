@@ -115,7 +115,7 @@ var trans_countries = {
     'Libya': 'Libia',
     'Zambia': 'Zambia',
     'Timor-Leste': 'Timor-Leste',
-    'Guyana': 'Guayana',
+    'Guyana': 'Guyana',
     'Tunisia': 'Túnez',
     'Japan': 'Japón',
     'Liechtenstein': 'Liechtenstein',
@@ -241,6 +241,24 @@ var population = {
 
 $.ajaxSetup({cache: false});
 
+var openIcon = new L.Icon({
+	iconUrl: 'assets/img/marker-icon-2x-gold.png',
+	shadowUrl: 'assets/img/marker-shadow.png',
+	iconSize: [15, 24],
+	iconAnchor: [7, 24],
+	popupAnchor: [1, -34],
+	shadowSize: [24, 24]
+});
+
+var closeIcon = new L.Icon({
+	iconUrl: 'assets/img/marker-icon-2x-green.png',
+	shadowUrl: 'assets/img/marker-shadow.png',
+	iconSize: [15, 24],
+	iconAnchor: [7, 24],
+	popupAnchor: [1, -34],
+	shadowSize: [24, 24]
+});
+
 var map_mun = L.map('map-mun', {
     center: [21.5, -79.371124],
     zoom: 15,
@@ -257,15 +275,44 @@ var map_mun = L.map('map-mun', {
 });
 var geojsonM = null, geojsonP = null, start_selection = window.location.hash.replace('#', '');
 map_mun.zoomControl.setPosition('topright');
+var markers = {};
 
 $.walker = {
     loaded: {},
     map: {
+        gen_markers: function(data){
+            for(var i in data.eventos){
+                event = data.eventos[i];
+                if(event['lat']===0 && event['lon']===0){
+                    continue;
+                }
+                if(event['abierto']===false){
+                    var marker = L.marker([event['lat'],event['lon']],{icon: closeIcon,
+                        title: event['identificador'], riseOnHover: true});
+                }else{
+                    var marker = L.marker([event['lat'],event['lon']],{icon: openIcon,
+                        title: event['identificador'], riseOnHover: true});
+                }
+                if(event['dpacode_provincia'] in markers){
+                    markers[event['dpacode_provincia']].push(marker);
+                }else{
+                    markers[event['dpacode_provincia']]=[];
+                    markers[event['dpacode_provincia']].push(marker);
+                }
+
+            }
+        },        
         clear: function () {
             if (geojsonM)
                 map_mun.removeLayer(geojsonM);
             if (geojsonP)
                 map_mun.removeLayer(geojsonP);
+            for(var i in markers){
+                for(var j=0;j<markers[i].length;j++){
+                    marker = markers[i][j];
+                    map_mun.removeLayer(marker);
+                }
+            }
         }
     },
 
@@ -447,6 +494,8 @@ function run_calculations() {
                 start_selection = false;
                 $.walker.view.update();
                 general_view = $locator.val() === 'cuba';
+                
+                $.walker.map.gen_markers(data);
 
                 $.walker.load("assets/data/municipios.geojson", function (municipios) {
                     $.walker.municipality.list = municipios;
@@ -480,8 +529,10 @@ function run_calculations() {
                         var casos_ayer = 0;
                         var sujetos_riesgo = 0;
                         var recuperados_hoy = 0;
+                        var recuperados_ayer = 0;
                         var graves_numero = 0;
                         var muertes_hoy = 0;
+                        var muertes_ayer = 0;
                         var cantidad_dias = 0;
                         var countries = {};
                         var ages = {
@@ -612,6 +663,8 @@ function run_calculations() {
                             }
                         }
                         casos_ayer = data.casos.dias[cantidad_dias - 1]["diagnosticados"].length;
+                        muertes_ayer = data.casos.dias[cantidad_dias - 1]["muertes_numero"];
+                        recuperados_ayer = data.casos.dias[cantidad_dias - 1]["recuperados_numero"];
                         //Bar for countries
                         var country = ['País'];
                         var countryDiagnoses = ['Diagnosticados'];
@@ -1952,7 +2005,7 @@ function run_calculations() {
                             }
                         });
 
-                        return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "casos_hoy": casos_hoy, "casos_ayer": casos_ayer, "sujetos_riesgo": sujetos_riesgo, "recuperados_hoy": recuperados_hoy, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "cantidad_dias": cantidad_dias};
+                        return {"cases": cases, "deaths": deaths, "gone": gone, "recov": recov, "female": sex_female, "male": sex_male, "unknownsex": sex_unknown, "casos_hoy": casos_hoy, "casos_ayer": casos_ayer, "sujetos_riesgo": sujetos_riesgo, "recuperados_hoy": recuperados_hoy, "recuperados_ayer": recuperados_ayer, "graves_numero": graves_numero, "muertes_hoy": muertes_hoy, "muertes_ayer": muertes_ayer, "cantidad_dias": cantidad_dias};
                     }
 
                     var globalInfo = getAllCasesAndSimpleGraphics();
@@ -1987,8 +2040,10 @@ function run_calculations() {
                             "casos_ayer": globalInfo.casos_ayer,
                             "sujetos_riesgo": globalInfo.sujetos_riesgo,
                             "recuperados_hoy": globalInfo.recuperados_hoy,
+                            "recuperados_ayer": globalInfo.recuperados_ayer,
                             "graves_numero": globalInfo.graves_numero,
                             "muertes_hoy": globalInfo.muertes_hoy,
+                            "muertes_ayer": globalInfo.muertes_ayer,
                             "cantidad_dias": globalInfo.cantidad_dias
                         };
                     }
@@ -2061,9 +2116,19 @@ function run_calculations() {
                     $('[data-content=diagno_hoy]').html(genInfo.casos_hoy + '<span class="diferencia">' + "(+" + (genInfo.casos_hoy - genInfo.casos_ayer) + ")" + '</span>');
                     }
                     $('[data-content=ingresados]').html(genInfo.sujetos_riesgo);
-                    $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy);
+                    if(genInfo.recuperados_hoy < genInfo.recuperados_ayer) {
+                    $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy + '<span class="diferencia">' + "(-" + (genInfo.recuperados_ayer - genInfo.recuperados_hoy) + ")" + '</span>');
+                    }
+                    else {
+                    $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy + '<span class="diferencia">' + "(+" + (genInfo.recuperados_hoy - genInfo.recuperados_ayer) + ")" + '</span>');
+                    }
                     $('[data-content=graves]').html(genInfo.graves_numero);
-                    $('[data-content=fallec_hoy]').html(genInfo.muertes_hoy);
+                    if(genInfo.muertes_hoy < genInfo.muertes_ayer) {
+                    $('[data-content=fallec_hoy]').html(genInfo.muertes_hoy + '<span class="diferencia">' + "(-" + (genInfo.muertes_ayer - genInfo.muertes_hoy) + ")" + '</span>');
+                    }
+                    else {
+                    $('[data-content=fallec_hoy]').html(genInfo.muertes_hoy + '<span class="diferencia">' + "(+" + (genInfo.muertes_hoy - genInfo.muertes_ayer) + ")" + '</span>');
+                    }                    
                     $('[data-content=dia_pandem]').html(genInfo.cantidad_dias);
 
                     function getMunProfile(code, mun, pro) {
@@ -2160,6 +2225,20 @@ function run_calculations() {
                         }
                         return '#D1D2D4';
                     }
+
+                     let province_code = -1;
+                    if(general_view===false){
+                        province_code = $.walker.province.findById(province_id)['properties']['DPA_province_code'];
+                    }
+                    for(var i in markers){
+
+                        if(general_view===false && i!==province_code){
+                            continue;
+                        }
+                        for(var j=0;j<markers[i].length;j++){
+                            markers[i][j].addTo(map_mun);
+                        }
+                    }                    
                 });
 
                 let curves2 = {};
