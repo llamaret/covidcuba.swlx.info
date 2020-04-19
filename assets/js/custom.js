@@ -2055,10 +2055,10 @@ function run_calculations() {
                     $("[data-content=mortalidad]").html(((genInfo.deaths * 100) / genInfo.total).toFixed(2));
                     $("[data-content=recuperacion]").html(((genInfo.recov * 100) / genInfo.total).toFixed(2));
                     if(genInfo.casos_hoy < genInfo.casos_ayer) {
-                    $('[data-content=diagno_hoy]').html(genInfo.casos_hoy + "(-" + (genInfo.casos_ayer - genInfo.casos_hoy) + ")");
+                    $('[data-content=diagno_hoy]').html(genInfo.casos_hoy + '<span class="diferencia">' + "(-" + (genInfo.casos_ayer - genInfo.casos_hoy) + ")" + '</span>');
                     }
                     else {
-                    $('[data-content=diagno_hoy]').html(genInfo.casos_hoy + "(+" + (genInfo.casos_hoy - genInfo.casos_ayer) + ")");
+                    $('[data-content=diagno_hoy]').html(genInfo.casos_hoy + '<span class="diferencia">' + "(+" + (genInfo.casos_hoy - genInfo.casos_ayer) + ")" + '</span>');
                     }
                     $('[data-content=ingresados]').html(genInfo.sujetos_riesgo);
                     $('[data-content=recupe_hoy]').html(genInfo.recuperados_hoy);
