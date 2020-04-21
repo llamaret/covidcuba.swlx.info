@@ -59,7 +59,7 @@ def get_json_info():
 
 
 def generate_csv():
-    f = open(os.path.join('data', 'covid19-casos.csv'), 'w')
+    f = open(os.path.join('assets/data', 'covid19-casos.csv'), 'w')
     rows = [['caso', 'sexo', 'edad', 'pais', 'municipio', 'provincia',
              'fecha_confirmacion', 'fecha_ingreso', 'tipo_contagio']]
     cuba = json.load(open('assets/data/covid19-cuba.json', 'r'))
