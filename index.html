@@ -140,7 +140,7 @@
                         <div class="single-counter-item"><!-- single counter item -->
                            <div class="content today_data">
                                 <h4 class="number"><span class="fa fa-calendar-plus"></span> <span data-content="diagno_hoy"><span class="fa fa-spinner fa-spin"></span></span></h4>
-                                <h4 class="title">Casos día: <span data-content="update"></span></h4>                                
+                                <h4 class="title">Día <span data-content="update"></span></h4>                                
                             </div>
                         </div><!-- //. single counter item -->
                     </div>
@@ -390,8 +390,7 @@
                                                     <div id="stringencycub-evol"></div>
                                                     <div class="map-quote">
                                                         * el <a href="https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker">Oxford Stringency Index</a> evalúa las intervenciones del estado en la epidemia.
-                                                        Los valores se obtienen de un <a href="https://covidtracker.bsg.ox.ac.uk/about-api">API público</a>.
-
+                                                        Los valores se obtienen de un <a href="https://covidtracker.bsg.ox.ac.uk/about-api">API público</a>. La información sistemática sobre qué gobiernos han tomado qué medidas, y cuándo, pueden ayudar a los tomadores de decisiones y a los ciudadanos a comprender la solidez de las respuestas gubernamentales de una manera consistente, ayudando a los esfuerzos para combatir la pandemia. El Oxford COVID-19 Government Response Tracker (OxCGRT) recopila sistemáticamente información sobre varias respuestas de política común diferentes que los gobiernos han tomado, califica la rigurosidad de tales medidas y agrega estos puntajes en un Índice de rigurosidad común.
                                                     </div>
                                                 </div>
                                             </div>
@@ -591,6 +590,12 @@
                             class="d-none  d-sm-block d-md-none d-lg-block">Fallecidos</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab-stringency">
+                        <i class="fa fa-heart-broken d-sm-none d-md-block d-lg-none"></i> <span
+                            class="d-none  d-sm-block d-md-none d-lg-block">Stringency</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="card-body">
@@ -677,6 +682,29 @@
                                 Comparación en el período de Cuba
                             </div>
                             <div id="countries-comparison-fallecidos"></div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="tab-pane fade" id="tab-stringency" role="tabpanel">
+                    <p class="text-center text-uppercase d-sm-none d-md-block d-lg-none">Casos Fallecidos</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text-block sub">
+                                Comparación en general
+                            </div>
+                            <div id="countries-curve-stringency-no-data" class="text-block sub">
+                                <h2><span>No hay datos</span></h2>
+                            </div>
+                            <div id="countries-curve-stringency"></div>
+                        </div>
+                        <div id="countries-comparison-stringency-container" class="col-md-6">
+                            <div class="text-block sub">
+                                Comparación en el período de Cuba
+                            </div>
+                            <div id="countries-curve-stringency-no-data2" class="text-block sub">
+                                <h2><span>No hay datos</span></h2>
+                            </div>
+                            <div id="countries-comparison-stringency"></div>
                         </div>
                     </div>
                 </div>
