@@ -45,7 +45,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- icofont -->
-    <link rel="stylesheet" href="assets/css/fontawesome.5.7.2.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
     <!-- flaticon -->
     <link rel="stylesheet" href="assets/css/flaticon.css">
     <!-- animate.css -->
@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="header-inner">
-                        <h1 class="title wow fadeInLeft">Seguimiento de la Pandemia de la COVID-19 en Cuba</h1>
+                        <h1 class="title wow fadeInLeft">Seguimiento de la Pandemia de la COVID-19 en Cuba <span class="fa fa-lungs-virus"></span></h1>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -179,7 +179,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                            <div class="content initial">
-                                <h4 class="number"><span class="fa fa-medkit"></span> <span data-content="diagno"><span class="fa fa-spinner fa-spin"></span></span></h4>
+                                <h4 class="number"><span class="fa fa-head-side-virus"></span> <span data-content="diagno"><span class="fa fa-spinner fa-spin"></span></span></h4>
                                 <h4 class="title">Positivos</h4>                                
                             </div>
                         </div><!-- //. single counter item -->
@@ -187,7 +187,7 @@
                     <div id="noshow" class="col-lg-3 col-md-6">
                         <div class="single-counter-item"><!-- single counter item -->
                             <div class="content initial">
-                                <h4 class="number"><span class="fa fa-hospital"></span> <span data-content="activo"><span class="fa fa-spinner fa-spin"></span></span></h4>
+                                <h4 class="number"><span class="fa fa-hospital-user"></span> <span data-content="activo"><span class="fa fa-spinner fa-spin"></span></span></h4>
                                 <h4 class="title">Activos</h4>
                             </div>
                         </div><!-- //. single counter item -->
@@ -384,7 +384,7 @@
                              <li class="single-feature-list wow zoomIn col-lg-12">
                                 <section class="content" id="stringencycub">
                                             <div class="card common-bg  mt-1">
-                                                <div class="card-header content-center">Evolución del Oxford Stringency Index para Cuba <span class="fa fa-atlas"></span></div>
+                                                <div class="card-header content-center">Evolución del Oxford Stringency Index para Cuba <span class="fa fa-head-side-mask"></span></div>
                                                 <div class="card-body">
                                                     <div id="stringencycub-value">Evaluación actual: <span id="stringencycub-idx"></span>/100</div>
                                                     <div id="stringencycub-evol"></div>
@@ -556,13 +556,13 @@
     <div id="compari" class="card common-bg wow zoomIn">
         <div class="card-header">
             <form class="form-inline mb-0 mt-1">
-                <label for="countrycurve-select">Comparación de Cuba con</label>
+                <label for="countrycurve-select">Comparación de Cuba con </label>
                 <select id="countrycurve-select" class="form-control form-control-sm ml-1"></select>
             </form>
             <ul class="nav nav-tabs nav-justified card-header-tabs">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#tab-confirmados">
-                        <i class="fa fa-users d-block d-sm-none d-md-block d-lg-none"></i> <span
+                        <i class="fa fa-head-side-virus d-block d-sm-none d-md-block d-lg-none"></i> <span
                             class="d-none d-sm-block d-md-none d-lg-block">Confirmados</span>
                     </a>
                 </li>
@@ -592,8 +592,8 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tab-stringency">
-                        <i class="fa fa-heart-broken d-sm-none d-md-block d-lg-none"></i> <span
-                            class="d-none  d-sm-block d-md-none d-lg-block">Stringency</span>
+                        <i class="fa fa-head-side-mask d-sm-none d-md-block d-lg-none"></i> <span
+                            class="d-none  d-sm-block d-md-none d-lg-block">Stringency Index</span>
                     </a>
                 </li>
             </ul>
@@ -685,8 +685,8 @@
                         </div>
                     </div>
                 </div>
-                                <div class="tab-pane fade" id="tab-stringency" role="tabpanel">
-                    <p class="text-center text-uppercase d-sm-none d-md-block d-lg-none">Casos Fallecidos</p>
+                <div class="tab-pane fade" id="tab-stringency" role="tabpanel">
+                    <p class="text-center text-uppercase d-sm-none d-md-block d-lg-none">Stringency Index</p>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="text-block sub">
@@ -707,6 +707,11 @@
                             <div id="countries-comparison-stringency"></div>
                         </div>
                     </div>
+                    <div class="map-quote">
+	                        * el <a href="https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker">Oxford Stringency Index</a> evalúa las intervenciones del estado en la epidemia.
+	                    Los valores se obtienen de un <a href="https://covidtracker.bsg.ox.ac.uk/about-api">API público</a>.
+	
+	                </div>
                 </div>
             </div>
             <div class="map-quote">
@@ -794,10 +799,10 @@
                             <div class="how-it-work-tab-nav">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="true"><i class="fa fa-thermometer-full"></i> Síntomas <span class="number">1</span></a>
+                                        <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="true"><i class="fa fa-head-side-cough"></i> Síntomas <span class="number">1</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fa fa-stethoscope"></i> Prevención <span class="number">2</span></a>
+                                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fa fa-hands-wash"></i> Prevención <span class="number">2</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="chat" aria-selected="false"><i class="fa fa-user-md"></i> Tratamientos <span class="number">3</span></a>
@@ -953,6 +958,7 @@
                             <li><a href="https://facebook.com/blogswlx" title="Nuestra página de Facebook"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="https://twitter.com/swl_swlx" title="Nuestra cuenta de Twitter"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="https://t.me/blogswlx" title="Nuestro grupo en Telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                            <li><a href="https://github.com/llamaret/covidcuba.swlx.info" title="Código en Github"><i class="fab fa-github-alt"></i></a></li>
                         </ul>
                     </div>
                 </div>

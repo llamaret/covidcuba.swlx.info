@@ -2804,6 +2804,20 @@ function run_calculations() {
                 countrysorted2.sort((a, b) => curves2[b]['ctotal'] - curves2[a]['ctotal']);
                 var $table_country = $('#table-countries > tbody').html('');
                 for (var i = 0; i < countrysorted2.length; i++) {
+
+                    var row = ("<tr><td>{ranking}</td>" +
+                        "<td>{country}</td>" +
+                        "<td>{cases}</td>" +
+                        "<td>{recovers}</td>" +
+                        "<td>{deaths}</td></tr>")
+                        .replace("{ranking}", i + 1)
+                        .replace("{country}", curves2[countrysorted2[i]]['weeks'][0] in trans_countries ? trans_countries[curves2[countrysorted2[i]]['weeks'][0]] : curves2[countrysorted2[i]]['weeks'][0])
+                        .replace('{cases}', curves2[countrysorted2[i]]['ctotal'])
+                        .replace('{recovers}', curves2[countrysorted2[i]]['crecovered'])
+                        .replace('{deaths}', curves2[countrysorted2[i]]['cdeaths']);
+                    $table_country.append(row);
+                }
+                for (var i = 0; i < countrysorted2.length; i++) {
                     xaxisdata[countrysorted2[i]] = 'Confirmados-' + countrysorted2[i];
                     columdata.push(curves2[countrysorted2[i]]['weeks']);
                     columdata.push(curves2[countrysorted2[i]]['cummulative_sum']);
