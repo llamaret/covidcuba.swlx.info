@@ -32,12 +32,12 @@ $(function () {
                     "lengthMenu": [25, 50, 100, 500, 1000],
                     "language": {
                         "sProcessing": "Procesando...",
-                        "sLengthMenu": "Mostrar _MENU_ casos",
+                        "sLengthMenu": "Mostrar _MENU_ registros",
                         "sZeroRecords": "No se encontraron resultados",
                         "sEmptyTable": "Ningún dato disponible en esta tabla",
-                        "sInfo": "Mostrando casos del _START_ al _END_ de un total de _TOTAL_ casos",
-                        "sInfoEmpty": "Mostrando casos del 0 al 0 de un total de 0 casos",
-                        "sInfoFiltered": "(filtrado de un total de _MAX_ casos)",
+                        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
                         "sInfoPostFix": "",
                         "sSearch": "Buscar:",
                         "sUrl": "",
@@ -217,7 +217,7 @@ $(function () {
         const search = $('[type="search"]').val();
         let content = $(this).data('text');
         if (search)
-            content = content.replace(new RegExp(search), "<span style='color:#005778;'>" + search + "</span>");
+            content = content.replace(new RegExp(search), "<span style='color:#006154;'>" + search + "</span>");
         let $tr = $(this).closest('tr');
         const $sender = $(this);
         setTimeout(function () {
