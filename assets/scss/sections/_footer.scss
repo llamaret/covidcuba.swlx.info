@@ -1,0 +1,93 @@
+/*--------------------------
+    Footer Area
+---------------------------*/
+.footer-area{
+    background-image: -moz-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+    background-image: -webkit-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+    background-image: -ms-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+    &.style-02{
+        background-image: unset;
+        padding-top: 220px;
+    }
+}
+
+.footer-top{
+    padding: 100px 0 95px 0;
+}
+.copyright-inner{
+    border-top: 1px solid rgba(#fff,.2);
+    color: rgba(#fff,.8);
+    font-size: 14px;
+    padding: 20px 0;
+    .left-content-area{
+        display: inline-block;
+    }
+    .right-content-area{
+        display: inline-block;
+        float: right;
+    }
+}
+.footer-widget{
+    .widget-title{
+        font-size: 22px;
+        line-height: 32px;
+        color: #fff;
+        margin-bottom: 23px;
+    }
+}
+.about_widget{
+    .footer-logo{
+        display: block;
+        margin-bottom: 25px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+        color: rgba(#fff,.8);
+    }
+    .social-icon{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin: 0 5px;
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                color: rgba(#fff,.8);
+                @include transition($transition);
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.nav_menus_widget{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            margin: 15px 0;
+            &:first-child{
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            a{
+                color: rgba(#fff,.8);
+                @include transition($transition);
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

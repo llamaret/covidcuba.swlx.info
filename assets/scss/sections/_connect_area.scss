@@ -1,0 +1,68 @@
+/*--------------------------
+    Connect Area
+----------------------------*/
+.connect-area{
+    .right-content-area{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        .title{
+            font-size: 48px;
+            line-height: 58px;
+        }
+        p{
+            margin-bottom: 0px;
+        }
+        .btn-wrapper{
+            .boxed-btn-02{
+                +.boxed-btn-02{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+.right-connect-you-wrap{
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
+   height: 100%;
+}
+.single-connect-you-item {
+    &.theme-01{}
+    &.theme-02{
+        background-image: -moz-linear-gradient( 50deg, rgb(112,191,236) 0%, rgb(39,132,252) 100%);
+        background-image: -webkit-linear-gradient( 50deg, rgb(112,191,236) 0%, rgb(39,132,252) 100%);
+        background-image: -ms-linear-gradient( 50deg, rgb(112,191,236) 0%, rgb(39,132,252) 100%);
+    }
+    &.theme-03{
+        background-image: -moz-linear-gradient( 50deg, rgb(232,119,203) 0%, rgb(161,151,250) 100%);
+        background-image: -webkit-linear-gradient( 50deg, rgb(232,119,203) 0%, rgb(161,151,250) 100%);
+        background-image: -ms-linear-gradient( 50deg, rgb(232,119,203) 0%, rgb(161,151,250) 100%);
+    }
+    background-image: -moz-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+    background-image: -webkit-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+    background-image: -ms-linear-gradient( 50deg, rgb(94,44,237) 0%, rgb(151,73,248) 100%);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    .icon{
+        font-size: 60px;
+        line-height: 70px;
+        color: $white;
+        margin-bottom: 16px;
+    }
+    .content{
+        .title{
+            font-size: 22px;
+            line-height: 34px;
+            font-weight: 700;
+            color: $white;
+        }
+        p{
+            color: rgba($white,.9);
+            margin-bottom: 0px;
+        }
+    }
+}

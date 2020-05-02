@@ -1,0 +1,22 @@
+/*-----------------------
+    Discover Items
+------------------------*/
+.single-discover-item{
+    text-align: center;
+    .icon{
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 18px;
+        // @include text-gradient(#fb129b,#19b6cb);
+        color: var(--main-color-one);
+    }
+    .content{
+        .title{
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 700;
+            margin-bottom:15px;
+        }
+        p{}
+    }
+}

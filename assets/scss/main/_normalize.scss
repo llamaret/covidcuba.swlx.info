@@ -1,0 +1,124 @@
+/*====================
+** Normalize
+====================*/
+
+html {
+    font-family: $body-font;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $base-font-size;
+    margin: 0;
+    color: $descr-color;
+    overflow-x: hidden;
+}
+
+// Typography
+h1 {
+    font-size: $font-size-h1;
+    line-height: 1.0833333333333333;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    line-height: 1.4444444444444444;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    line-height: 1.0833333333333333;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    line-height: 1.2380952380952381;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+    font-weight: 700;
+    font-family: $heading-font;
+}
+
+p {
+    font-size: $base-font-size;
+    color: $descr-color;
+    line-height: 1.625;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+a {
+    color: $heading-color;
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+a i {
+    padding: 0 2px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*input and button type focus outline disable*/
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+/**
+ * 5.0 - Alignments
+ */
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto 1.75em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

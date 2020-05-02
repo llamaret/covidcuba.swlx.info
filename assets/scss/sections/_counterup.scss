@@ -1,0 +1,74 @@
+/*----------------------
+    Counterup Area
+-----------------------*/
+.single-counterup-style-02{
+    text-align: center;
+    .count-text{
+        background-color: #f7f7f8;
+        width: 130px;
+        height: 130px;
+        font-size: 48px;
+        line-height: 130px;
+        text-align: center;
+        border-radius: 15px;
+        position: relative;
+        z-index: 0;
+        margin: 0 auto;
+        margin-bottom: 22px;
+        .count-wrap{
+            @include text-gradient (#0250c5, #d43f8d);
+        }
+        &:after{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f7f7f8;
+            content: '';
+            z-index: -1;
+        }
+    }
+    .content{
+        .title{
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+    }
+}
+.counterup-area{
+    padding: 120px 0 120px 0;
+}
+.single-counter-item{
+    display: flex;
+    &.white{
+        .content{
+            .count-num{
+                color: $white;
+            }
+            .title{
+                color: rgba($white,.7);
+            }
+        }
+    }
+    .icon{
+        font-size: 80px;
+        line-height: 80px;
+        color: $base-color;
+        margin-right: 20px;
+    }
+    .content{
+        .count-num{
+            font-size: 36px;
+            line-height: 46px;
+            color: $heading-color;
+            font-weight: 600;
+        }
+        .title{
+            font-size: 16px;
+            line-height: 26px;
+            color: #666666;
+            font-weight: 500;
+        }
+    }
+}

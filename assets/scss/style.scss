@@ -1,0 +1,81 @@
+/*
+    Css Table of Content
+    --------------------------
+    ** Typography 
+    --------------------------
+    ** Global 
+    --------------------------
+    ** Breadcumb Area
+    --------------------------
+    ** Preloader
+    --------------------------
+    ** Normalize
+    --------------------------
+    ** Navbar
+    --------------------------
+    ** Header 
+    --------------------------
+    ** Featured Area 
+    --------------------------
+    ** Video Area
+    --------------------------
+    ** Counterup Area
+    --------------------------
+    ** Why Choose Us Area
+    --------------------------
+    ** How It Works Area
+    --------------------------
+    ** Screenshort Area
+    --------------------------
+    ** Testimonial Area
+    --------------------------
+    ** Team Member Area
+    --------------------------
+    ** Footer Area
+    --------------------------
+    ** Icon Box Item
+    --------------------------
+    ** Contact Area
+    --------------------------
+    ** Call TO Action Area
+    --------------------------
+    
+
+    --------------------------
+    ** Blog Page
+    --------------------------
+    ** Blog Details Page
+    --------------------------
+
+*/
+
+//=Main scss
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+//=Section scss
+@import "sections/_navbar";
+@import "sections/_header";
+@import "sections/_featured_area";
+@import "sections/_video_area";
+@import "sections/_counterup";
+@import "sections/_why_choose_us";
+@import "sections/_how_it_works";
+@import "sections/_screenshort";
+@import "sections/_testimonial";
+@import "sections/_pricing_plan";
+@import "sections/_team_member";
+@import "sections/_icon_box";
+@import "sections/_full_width_feature_area";
+@import "sections/_contact";
+@import "sections/_call_to_action";
+@import "sections/_footer";
+@import "sections/_discover_items";
+@import "sections/_connect_area";
+@import "sections/_customer_reply";
+
+@import "sections/_sidebar";
+//=pages scss
+@import "pages/_blog";
+@import "pages/_blog_details";
